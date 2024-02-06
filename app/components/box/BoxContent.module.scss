@@ -1,0 +1,81 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  background-color: white;
+  padding: 20px;
+  width: 600px; 
+  color: black;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.header h2 {
+  margin: 0;
+}
+
+.closeButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  padding: 5px 10px;
+}
+
+.closeButton:hover {
+  background-color: #ddd;
+}
+
+.closeButtonMobile {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .mobileOverlay {
+    overflow: auto;
+  }
+
+  .closeButton {
+    display: none;
+  }
+
+  .closeButtonMobile {
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+}
